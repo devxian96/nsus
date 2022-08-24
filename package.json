@@ -1,6 +1,6 @@
 {
   "name": "nsus",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Next generation State management library to replace UseState.",
   "author": {
     "name": "Seokhyeon Jang",

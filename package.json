@@ -1,6 +1,6 @@
 {
   "name": "nsus",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Next generation State management library to replace UseState.",
   "author": {
     "name": "Seokhyeon Jang",
@@ -28,6 +28,7 @@
     "url": "git+https://github.com/devxian96/nsus.git"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "private": false,
   "scripts": {
     "dev": "yarn --cwd ./test dev",
@@ -35,7 +36,7 @@
     "prepare": "yarn build"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "compilerOptions": {
     "outDir": "./dist",

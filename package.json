@@ -1,7 +1,7 @@
 {
-  "name": "datastate",
+  "name": "nsus",
   "version": "0.0.0",
-  "description": "Next generation health management library to replace useState.",
+  "description": "Next generation State management library to replace UseState.",
   "author": {
     "name": "Seokhyeon Jang",
     "email": "coolman555@me.com",
@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/whitekiwi/graphql-request-helper",
   "bugs": {
-    "url": "https://github.com/devxian96/usedata/issues",
+    "url": "https://github.com/devxian96/nsus/issues",
     "email": "coolman555@me.com"
   },
   "license": "MIT",
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devxian96/usedata.git"
+    "url": "git+https://github.com/devxian96/nsus.git"
   },
   "main": "dist/index.js",
   "private": false,

@@ -11,7 +11,7 @@ function App() {
 
       <div className="card">
         <p>
-          Click the button to test the <code>reacktion</code>
+          Click the button to test the <code>nsus</code>
         </p>
         <button onClick={() => state.count++}>count is {state.count}</button>
       </div>

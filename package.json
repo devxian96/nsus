@@ -1,5 +1,5 @@
 {
-  "name": "reaktion",
+  "name": "datastate",
   "version": "0.0.0",
   "description": "Next generation health management library to replace useState.",
   "author": {
@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/whitekiwi/graphql-request-helper",
   "bugs": {
-    "url": "https://github.com/devxian96/reaktion/issues",
+    "url": "https://github.com/devxian96/usedata/issues",
     "email": "coolman555@me.com"
   },
   "license": "MIT",
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devxian96/reaktion.git"
+    "url": "git+https://github.com/devxian96/usedata.git"
   },
   "main": "dist/index.js",
   "private": false,

@@ -2,6 +2,10 @@ import useData from "../../src/index";
 import { Header, Footer } from "./components";
 import "./App.css";
 
+type Data = {
+  count: number;
+};
+
 function App() {
   const state = useData({ count: 0 });
 

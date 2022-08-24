@@ -1,80 +1,80 @@
-# react-global-components
-![npm](https://img.shields.io/npm/dm/react-global-components?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/react-global-components?style=for-the-badge)
-[![GitHub stars](https://img.shields.io/github/stars/devxian96/react-global-components?style=for-the-badge)](https://github.com/devxian96/react-global-components/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/devxian96/react-global-components?style=for-the-badge)](https://github.com/devxian96/react-global-components/network)
-[![GitHub issues](https://img.shields.io/github/issues/devxian96/react-global-components?style=for-the-badge)](https://github.com/devxian96/react-global-components/issues)
-[![GitHub issues](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](https://github.com/devxian96/react-global-components/blob/master/LICENSE)
+# NSUS
 
-> The library that enables react to implement global components.
+![npm](https://img.shields.io/npm/dm/nsus?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/nsus?style=for-the-badge)
+[![GitHub stars](https://img.shields.io/github/stars/devxian96/nsus?style=for-the-badge)](https://github.com/devxian96/nsus/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/devxian96/nsus?style=for-the-badge)](https://github.com/devxian96/nsus/network)
+[![GitHub issues](https://img.shields.io/github/issues/devxian96/nsus?style=for-the-badge)](https://github.com/devxian96/nsus/issues)
+[![GitHub issues](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](https://github.com/devxian96/nsus/blob/master/LICENSE)
+
+> Next generation State management library to replace UseState.
+
 ## Npm / Yarn
-```
-npm i react-global-components
 
-yarn add react-global-components
 ```
+npm i nsus
+
+yarn add nsus
+```
+
 ## Getting started
+
 ### Requirement
+
 - esNext
-- React
-### Edit File
+- React Hook
+
+### Example
+
+**Javascript**
+
 ```javascript
-// src/index.js or src/app.js
-import ReactGlobalComponents from 'react-global-components';
-ReactGlobalComponents();
+import useData from "nsus";
 
-// OR
+const app = () => {
+  const state = useData({ count: 0 });
+  return <button onClick={() => state.count++}>{state.count}</button>;
+};
+```
 
-import ReactGlobalComponents from 'react-global-components';
-ReactGlobalComponents('../../../plugins');
-```
-```javascript
-// plugins/Card.js
-import { Card } from 'card-components';
-export default Card;
-```
-**Important!!**   
-You can call it by file name. Reserved words must not be used.
-```javascript
-// Every Where Can Call Tt without import
-export default Index() {
-    const func = Card();
-    console.log(func);
+**Typescript**
 
-    return (<Card />);
-}
-```
-```json
-// .eslintrc
-{
-  "parser": "babel-eslint"
-}
+```typescript
+// Same code, support Typescript.
+import useData from "nsus";
 
+const app = () => {
+  const state = useData({ count: 0 });
+  return <button onClick={() => state.count++}>{state.count}</button>;
+};
 ```
-This library support component, function, variable.   
-Now enjoy coding.
+
+This library is inspired by Vuejs. I hope that two-way data binding is possible even in react.
+
 ## Features
-- Can make Global Components.
-- Focus on bundle size and stability.
+
+- Direct state change via proxy.
+- Automatic dom Reconciliation.
 
 ## Update
+
 - MAJOR version when you make incompatible API changes,
 - MINOR version when you add functionality in a backwards-compatible manner, and
 - PATCH version when you make backwards-compatible bug fixes.
 
 > example:)
-> v0.0.18 is   
+> v0.0.18 is  
 > 18th patched.
 
 ## Updated New Version
-- Support edit basic root of the plugins folder. *(MINOR)*
-- fix: pollyfill and find file name. *(PATCH)*
-- Jest tests case more improve *(PATCH)*
-- Typescript's type check more improve *(PATCH)*
+
+not thing
 
 ## Update Scheduled
-- Compress global import size *(PATCH)*
+
+Tell me what you need? [issue](https://github.com/devxian96/nsus/issues)
 
 ## Examples
-This is [Example](https://github.com/devxian96/react-global-components-example) boilerplate code.   
+
+This is [Example](https://github.com/devxian96/nsus/tree/main/test) boilerplate code.  
 You can get better way.

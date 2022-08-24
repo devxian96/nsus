@@ -15,12 +15,13 @@
   "license": "MIT",
   "keywords": [
     "react",
+    "state-management",
     "reactjs",
-    "useState",
-    "reaktion",
-    "state",
-    "exNext",
-    "commonJS"
+    "react-components",
+    "react-hooks",
+    "usestate",
+    "usestate-hook",
+    "usestate-from-react"
   ],
   "repository": {
     "type": "git",

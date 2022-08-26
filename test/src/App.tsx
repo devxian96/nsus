@@ -1,10 +1,6 @@
-import useData from "../../src/index";
-import { Header, Footer } from "./components";
-import "./App.css";
-
-type Data = {
-  count: number;
-};
+import useData from '../../src/index';
+import { Header, Footer } from './components';
+import './App.css';
 
 function App() {
   const state = useData({ count: 0 });

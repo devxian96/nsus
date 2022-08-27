@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { CssReset } from './components';
 import { css } from '@emotion/react';
 import CodePreview from './components/CodePreview';
@@ -9,12 +9,25 @@ import useData from '../../src/index';
 const App: React.FC = (): JSX.Element => {
   const state = useData({ count: 0 });
 
+  const oneUp = useCallback(() => state.count++, []);
+
   const style = {
     header: css`
+      position: absolute;
       color: white;
       display: flex;
       justify-content: space-between;
-      padding: 30px 40px;
+      z-index: 1;
+      width: 100vw;
+
+      a {
+        font-weight: 600;
+      }
+
+      h1,
+      a {
+        padding: 30px 40px;
+      }
     `,
     logo: css`
       font-size: 3rem;
@@ -34,6 +47,7 @@ const App: React.FC = (): JSX.Element => {
       left: 50%;
       margin-left: -220px;
       margin-top: -370px;
+      z-index: 0;
     `,
     example: css`
       align-items: center;
@@ -47,17 +61,29 @@ const App: React.FC = (): JSX.Element => {
       width: 640px;
       height: 80vh;
 
-      CodePreview {
-        border-radius: 10px;
-        box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.5);
-        display: inline-block;
-        font-size: 0.8rem;
-        margin-top: -50px;
-        padding: 40px 50px 40px 45px;
-        pointer-events: all;
-        white-space: pre-wrap;
-        width: auto;
-        background-color: #222;
+      article {
+        h2 {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+      }
+    `,
+
+    button: css`
+      color: white;
+      width: 100%;
+      height: 50px;
+      font-size: 1.25rem;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+
+      :hover {
+        background: rgba(255, 255, 255, 0.5);
       }
     `,
   };
@@ -68,7 +94,9 @@ const App: React.FC = (): JSX.Element => {
 
       <header css={style.header}>
         <h1 css={style.logo}>NSUS</h1>
-        <div>GITHUB</div>
+        <a href="https://github.com/devxian96/nsus" target="_blank" rel="noreferrer">
+          Github
+        </a>
       </header>
 
       <div css={style.character}>
@@ -77,13 +105,18 @@ const App: React.FC = (): JSX.Element => {
 
       <section css={style.example}>
         <article>
+          <h2>Example</h2>
           <CodePreview code={code} />
-          <button onClick={() => state.count++}>count is {state.count}</button>
+          <button css={style.button} onClick={oneUp}>
+            count is {state.count}
+          </button>
         </article>
       </section>
 
       <footer css={style.footer}>
-        <small>MIT License</small>
+        <a href="https://github.com/devxian96/nsus/blob/main/LICENSE" target="_blank" rel="noreferrer">
+          MIT License
+        </a>
       </footer>
     </main>
   );

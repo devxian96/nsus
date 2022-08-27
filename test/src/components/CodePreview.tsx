@@ -7,7 +7,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import type { CodeProps } from '../types/common';
 
 const CodePreview: React.FC<CodeProps> = ({ code, ...props }): JSX.Element => {
-  const emotion = {
+  const style = {
     button: css`
       button {
         float: right;
@@ -19,8 +19,8 @@ const CodePreview: React.FC<CodeProps> = ({ code, ...props }): JSX.Element => {
   };
   return (
     <Highlight {...defaultProps} code={code} language="jsx" theme={undefined}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre css={emotion.button} className={className} style={{ ...style, position: 'relative' }}>
+      {({ className, style: inLineStyle, tokens, getLineProps, getTokenProps }) => (
+        <pre css={style.button} className={className} style={{ ...inLineStyle, position: 'relative' }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

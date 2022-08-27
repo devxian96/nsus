@@ -8,6 +8,7 @@ const CssReset: React.FC = (): JSX.Element => {
       styles={css`
         ${normalize}
         h1, h2, h3, h4, h5, h6 {
+          color: white;
           font-size: 1em;
           font-weight: normal;
           margin: 0;
@@ -20,6 +21,10 @@ const CssReset: React.FC = (): JSX.Element => {
           background-size: cover;
           font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto,
             noto, segoe ui, arial, sans-serif;
+        }
+        a {
+          text-decoration: none;
+          color: white;
         }
       `}
     />
